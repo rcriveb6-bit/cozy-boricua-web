@@ -1,8 +1,8 @@
 const pages = [
-  { src: null, label: 'B/W para colorear',     rotate: 'rotate-2',  desc: 'Sato en la hamaca 🐶' },
-  { src: null, label: 'Inspiración coloreada',  rotate: '-rotate-2', desc: 'Frutas tropicales 🍍' },
-  { src: null, label: 'B/W para colorear',     rotate: 'rotate-1',  desc: 'Cocina boricua 🍳' },
-  { src: null, label: 'Inspiración coloreada',  rotate: '-rotate-1', desc: 'Piraguas en El Morro 🏰' },
+  { src: '/images/page-1.jpg', label: 'B/W para colorear',    rotate: 'rotate-2',  desc: 'Página interior' },
+  { src: '/images/page-2.jpg', label: 'Inspiración coloreada', rotate: '-rotate-2', desc: 'Página interior' },
+  { src: '/images/page-3.jpg', label: 'B/W para colorear',    rotate: 'rotate-1',  desc: 'Página interior' },
+  { src: '/images/page-4.jpg', label: 'Inspiración coloreada', rotate: '-rotate-1', desc: 'Página interior' },
 ]
 
 export default function PagePreview() {

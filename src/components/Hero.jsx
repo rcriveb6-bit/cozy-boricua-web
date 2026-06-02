@@ -48,13 +48,11 @@ export default function Hero() {
         <div className="relative flex justify-center items-center">
           <div className="relative w-full max-w-[500px]">
 
-            {/* Replace src with real cover: /images/cover.jpg */}
-            <div className="w-full rounded-xl sticker-lift rotate-2 relative z-10 aspect-square bg-primary-container flex flex-col items-center justify-center gap-3">
-              <span className="text-[80px]">📚</span>
-              <p className="font-headline-md text-headline-md text-primary text-center px-4">Cozy Boricua</p>
-              <p className="text-body-md text-on-surface-variant text-center px-4 text-sm">Agrega la portada aquí → public/images/cover.jpg</p>
-            </div>
-            {/* <img alt="Cozy Boricua Book Cover" className="w-full h-auto rounded-xl sticker-lift rotate-2 relative z-10" src="/images/cover.jpg" /> */}
+            <img
+              alt="Cozy Boricua Book Cover"
+              className="w-full h-auto rounded-xl sticker-lift rotate-2 relative z-10"
+              src="/images/cover.jpg"
+            />
 
             <div className="absolute -top-10 -right-5 sparkle-float text-primary pointer-events-none">
               <span className="material-symbols-outlined text-5xl" style={{ fontVariationSettings: "'FILL' 1" }}>colors_spark</span>

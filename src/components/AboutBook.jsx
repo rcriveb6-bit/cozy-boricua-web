@@ -13,14 +13,12 @@ export default function AboutBook() {
           {/* Image */}
           <div className="order-2 md:order-1 relative h-full min-h-[400px]">
             <div className="absolute inset-0 bg-primary-container/20 rounded-xl -rotate-3" />
-            <div className="absolute inset-4 bg-white rounded-xl shadow-lg border-2 border-outline/10 p-4 flex items-center justify-center">
-              {/* Replace with real image: /images/interior.jpg */}
-              <div className="w-full h-full rounded-lg bg-surface-container-low flex flex-col items-center justify-center gap-3 min-h-[300px]">
-                <span className="text-[60px]">🎨</span>
-                <p className="font-headline-md text-headline-md text-primary text-center">Páginas interiores</p>
-                <p className="text-body-md text-on-surface-variant text-center text-sm px-4">Agrega una foto aquí → public/images/interior.jpg</p>
-              </div>
-              {/* <img className="w-full h-full object-cover rounded-lg" src="/images/interior.jpg" alt="Interior del libro Cozy Boricua" /> */}
+            <div className="absolute inset-4 bg-white rounded-xl shadow-lg border-2 border-outline/10 p-4">
+              <img
+                className="w-full h-full object-cover rounded-lg"
+                src="/images/about.jpg"
+                alt="Interior del libro Cozy Boricua"
+              />
             </div>
           </div>
 

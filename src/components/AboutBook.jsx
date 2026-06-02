@@ -1,3 +1,5 @@
+import logoCoqui from '/images/logo-coqui-creative.png'
+
 export default function AboutBook() {
   const checks = [
     'Explora el encanto del bosque El Yunque.',
@@ -28,10 +30,7 @@ export default function AboutBook() {
               Un viaje a colorear por Puerto Rico
             </h2>
             <p className="text-body-lg text-on-surface-variant">
-              <strong>Cozy Boricua</strong> es más que un libro de colorear — es un abrazo cálido de la isla. Creado por <em>Coquí Creative</em>, presenta la reimaginación más adorable de los lugares más icónicos de Puerto Rico.
-
-              <br/><br/>
-              🐸 <strong>Coquí Creative</strong> es nuestra editorial — encuentra más en <a href="https://coquicreativepr.com" target="_blank" rel="noopener noreferrer" style={{textDecoration:'underline',color:'#7b535e'}}>coquicreativepr.com</a>
+              <strong>Cozy Boricua</strong> es más que un libro de colorear — es un abrazo cálido de la isla. Presenta la reimaginación más adorable de los lugares más icónicos de Puerto Rico.
             </p>
             <ul className="space-y-4 pt-4">
               {checks.map((text, i) => (
@@ -43,6 +42,17 @@ export default function AboutBook() {
                 </li>
               ))}
             </ul>
+
+            <div className="pt-8 border-t border-outline-variant/30">
+              <a href="https://coquicreativepr.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 text-on-surface-variant hover:text-primary transition-colors no-underline">
+                <img src={logoCoqui} alt="Coquí Creative" className="w-10 h-10" />
+                <div className="text-left">
+                  <p className="font-headline-md text-headline-md" style={{fontSize:'18px',color:'#7b535e'}}>Coquí Creative</p>
+                  <p className="text-body-md text-on-surface-variant text-sm">Editorial boricua — coquicreativepr.com →</p>
+                </div>
+              </a>
+            </div>
+
           </div>
 
         </div>

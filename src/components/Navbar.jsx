@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { links } from '../data/links'
+import logoCoqui from '../assets/logo-coqui-creative.png'
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
@@ -16,8 +17,9 @@ export default function Navbar() {
       <div className="flex justify-between items-center px-5 md:px-16 py-4 max-w-container-max mx-auto w-full">
 
         {/* Logo */}
-        <a className="font-display-lg text-headline-md text-primary tracking-tight flex items-center gap-2 no-underline" href="#">
-          <span style={{fontSize:'20px'}}>🐸</span> Cozy Boricua
+        <a className="text-primary tracking-tight flex items-center gap-2 no-underline" href="#">
+          <img src={logoCoqui} alt="Coquí Creative" className="w-10 h-10" />
+          <span className="font-display-lg text-headline-md">Cozy Boricua</span>
         </a>
 
         {/* Desktop nav */}

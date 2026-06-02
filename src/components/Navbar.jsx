@@ -17,7 +17,7 @@ export default function Navbar() {
 
         {/* Logo */}
         <a className="font-display-lg text-headline-md text-primary tracking-tight flex items-center gap-2 no-underline" href="#">
-          🐸 Cozy Boricua
+          <span style={{fontSize:'20px'}}>🐸</span> Cozy Boricua
         </a>
 
         {/* Desktop nav */}

@@ -29,6 +29,9 @@ export default function AboutBook() {
             </h2>
             <p className="text-body-lg text-on-surface-variant">
               <strong>Cozy Boricua</strong> es más que un libro de colorear — es un abrazo cálido de la isla. Creado por <em>Coquí Creative</em>, presenta la reimaginación más adorable de los lugares más icónicos de Puerto Rico.
+
+              <br/><br/>
+              🐸 <strong>Coquí Creative</strong> es nuestra editorial — encuentra más en <a href="https://coquicreativepr.com" target="_blank" rel="noopener noreferrer" style={{textDecoration:'underline',color:'#7b535e'}}>coquicreativepr.com</a>
             </p>
             <ul className="space-y-4 pt-4">
               {checks.map((text, i) => (

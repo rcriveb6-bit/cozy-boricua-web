@@ -10,10 +10,13 @@ export default function Footer() {
 
           {/* Brand */}
           <div className="flex flex-col items-center md:items-start gap-2">
-            <span className="font-headline-md text-headline-md text-secondary">🐸 Coquí Creative</span>
+            <span className="font-headline-md text-headline-md text-secondary">Cozy Boricua</span>
             <p className="text-on-surface-variant max-w-[300px] text-center md:text-left text-body-md">
-              Llevando la alegría boricua y la estética kawaii a tu hogar.
+              El libro de colorear kawaii de Puerto Rico.
             </p>
+            <a href="https://coquicreativepr.com" target="_blank" rel="noopener noreferrer" className="text-on-surface-variant hover:text-primary transition-colors text-sm underline">
+              Por Coquí Creative 🐸
+            </a>
           </div>
 
           {/* Links */}
@@ -43,7 +46,7 @@ export default function Footer() {
             © {new Date().getFullYear()} Coquí Creative. Hecho con amor desde Puerto Rico 🇵🇷
           </p>
           <p className="text-on-surface-variant text-sm mt-1">
-            Parte de la <em>Boriken Coloring Series</em> · {links.hashtag}
+            Coquí Creative 🐸 · {links.hashtag}
           </p>
         </div>
       </div>

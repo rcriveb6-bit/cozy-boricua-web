@@ -2,103 +2,74 @@ import { links } from '../data/links'
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[88vh] flex items-center overflow-hidden bg-beach-gradient pt-8 pb-16">
-      <div className="max-w-[1100px] mx-auto px-5 md:px-16 w-full grid md:grid-cols-2 gap-12 items-center">
+    <section className="relative min-h-[85vh] flex items-center overflow-hidden bg-beach-gradient pt-16 md:pt-0">
+      <div className="max-w-container-max mx-auto px-5 md:px-16 w-full grid md:grid-cols-2 gap-12 items-center">
 
-        {/* Text side */}
-        <div className="space-y-6 z-10 text-center md:text-left order-2 md:order-1">
+        {/* Text */}
+        <div className="space-y-8 z-10 text-center md:text-left">
 
-          {/* Badge */}
-          <div
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full"
-            style={{ backgroundColor: '#bde9d8', color: '#3e6659', fontWeight: 700, fontSize: '13px', fontFamily: '"Be Vietnam Pro", sans-serif' }}
-          >
-            <span className="material-symbols-outlined" style={{ fontSize: '16px', fontVariationSettings: "'FILL' 1" }}>auto_awesome</span>
-            Boriken Coloring Series · Libro 1
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-secondary-container text-on-secondary-container rounded-full text-label-lg font-bold sticker-lift border-0 shadow-none">
+            <span className="material-symbols-outlined text-[18px]" style={{ fontVariationSettings: "'FILL' 1" }}>
+              auto_awesome
+            </span>
+            ¡LLEGÓ EL COQUÍ!
           </div>
 
-          {/* Main headline */}
-          <h1 style={{ fontFamily: '"Quicksand", sans-serif', fontWeight: 700, color: '#7b535e', fontSize: 'clamp(32px, 5vw, 52px)', lineHeight: '1.15', letterSpacing: '-0.5px' }}>
-            Colorea la isla que llevas en el corazón.
+          <h1 className="font-display-lg text-[42px] md:text-display-lg text-primary leading-tight">
+            Lleva la isla en <br />tu corazón
           </h1>
 
-          {/* Subtitle */}
-          <p style={{ fontFamily: '"Be Vietnam Pro", sans-serif', color: '#504446', fontSize: '18px', lineHeight: '1.6', maxWidth: '480px' }}>
-            <strong>Cozy Boricua</strong> — el primer libro de colorear kawaii inspirado en Puerto Rico.
+          <p className="text-body-lg text-on-surface-variant max-w-md mx-auto md:mx-0">
+            El primer libro de colorear kawaii inspirado en la magia de Puerto Rico. Perfecto para tardes cozy y sueños de la isla.
           </p>
 
-          <p style={{ color: '#7b535e', fontSize: '15px', fontWeight: 500, fontFamily: '"Be Vietnam Pro", sans-serif' }}>
-            Para todas las edades. Para toda la familia. Para todo boricua de corazón. 🇵🇷
-          </p>
-
-          {/* CTAs */}
-          <div className="flex flex-col sm:flex-row gap-3 pt-2 justify-center md:justify-start">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-4">
             <a
               href={links.amazon}
               target="_blank"
               rel="noopener noreferrer"
-              className="sticker-lift inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl no-underline"
-              style={{ backgroundColor: '#7b535e', color: 'white', fontFamily: '"Be Vietnam Pro", sans-serif', fontWeight: 800, fontSize: '16px' }}
-              onClick={() => {
-                if (typeof window !== 'undefined' && window.gtag) {
-                  window.gtag('event', 'click_amazon_cta', { event_category: 'hero' })
-                }
-              }}
+              className="sticker-lift bg-primary text-on-primary px-8 py-4 rounded-xl font-headline-md text-headline-md flex items-center justify-center gap-2 no-underline"
+              onClick={() => window.gtag?.('event', 'click_amazon_hero')}
             >
               Comprar en Amazon
-              <span className="material-symbols-outlined" style={{ fontSize: '18px' }}>shopping_bag</span>
+              <span className="material-symbols-outlined">shopping_bag</span>
             </a>
 
             <a
               href="#gallery"
-              className="sticker-lift inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl no-underline"
-              style={{ backgroundColor: '#f5edde', color: '#7b535e', fontFamily: '"Be Vietnam Pro", sans-serif', fontWeight: 700, fontSize: '16px' }}
+              className="sticker-lift bg-surface-container-high text-primary px-8 py-4 rounded-xl font-headline-md text-headline-md flex items-center justify-center no-underline"
             >
-              Ver las páginas
+              Ver Muestra
             </a>
           </div>
-
-          {/* Price tag */}
-          <p style={{ color: '#827476', fontSize: '13px', fontFamily: '"Be Vietnam Pro", sans-serif' }}>
-            📦 Disponible en Amazon · <strong style={{ color: '#7b535e' }}>{links.price}</strong> · Envío Prime disponible
-          </p>
         </div>
 
-        {/* Book cover side */}
-        <div className="relative flex justify-center items-center order-1 md:order-2">
-          <div className="relative w-full max-w-[420px]">
+        {/* Book cover */}
+        <div className="relative flex justify-center items-center">
+          <div className="relative w-full max-w-[500px]">
 
-            {/* Placeholder — reemplazar src con imagen real de la portada */}
-            <div
-              className="sticker-lift rounded-xl overflow-hidden"
-              style={{ transform: 'rotate(2deg)', aspectRatio: '1 / 1', backgroundColor: '#f9c5d1', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', gap: '12px' }}
-            >
-              <span style={{ fontSize: '80px' }}>📚</span>
-              <p style={{ fontFamily: '"Quicksand", sans-serif', fontWeight: 700, color: '#7b535e', fontSize: '18px', textAlign: 'center', padding: '0 20px' }}>
-                Cozy Boricua
-              </p>
-              <p style={{ color: '#827476', fontSize: '13px', fontFamily: '"Be Vietnam Pro", sans-serif' }}>
-                Agrega la portada del libro aquí
-              </p>
+            {/* Replace src with real cover: /images/cover.jpg */}
+            <div className="w-full rounded-xl sticker-lift rotate-2 relative z-10 aspect-square bg-primary-container flex flex-col items-center justify-center gap-3">
+              <span className="text-[80px]">📚</span>
+              <p className="font-headline-md text-headline-md text-primary text-center px-4">Cozy Boricua</p>
+              <p className="text-body-md text-on-surface-variant text-center px-4 text-sm">Agrega la portada aquí → public/images/cover.jpg</p>
             </div>
-            {/* Cuando tengas la imagen: */}
-            {/* <img src="/images/cover.jpg" alt="Cozy Boricua Book Cover" className="sticker-lift rounded-xl w-full" style={{ transform: 'rotate(2deg)' }} /> */}
+            {/* <img alt="Cozy Boricua Book Cover" className="w-full h-auto rounded-xl sticker-lift rotate-2 relative z-10" src="/images/cover.jpg" /> */}
 
-            {/* Floating sparkles */}
-            <div className="sparkle-float absolute -top-8 -right-4" style={{ color: '#7b535e', pointerEvents: 'none' }}>
-              <span className="material-symbols-outlined" style={{ fontSize: '48px', fontVariationSettings: "'FILL' 1" }}>colors_spark</span>
+            <div className="absolute -top-10 -right-5 sparkle-float text-primary pointer-events-none">
+              <span className="material-symbols-outlined text-5xl" style={{ fontVariationSettings: "'FILL' 1" }}>colors_spark</span>
             </div>
-            <div className="sparkle-float-delay absolute -bottom-4 -left-8" style={{ color: '#3e6659', pointerEvents: 'none' }}>
-              <span className="material-symbols-outlined" style={{ fontSize: '36px', fontVariationSettings: "'FILL' 1" }}>star</span>
+            <div className="absolute -bottom-5 -left-10 sparkle-float-delay text-secondary pointer-events-none">
+              <span className="material-symbols-outlined text-4xl" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
             </div>
           </div>
         </div>
 
       </div>
 
-      {/* Background decoration */}
-      <div className="absolute top-0 right-0 p-8 pointer-events-none select-none" style={{ color: 'rgba(130,116,118,0.08)' }}>
-        <span className="material-symbols-outlined" style={{ fontSize: '180px' }}>cloud</span>
+      {/* BG decoration */}
+      <div className="absolute top-0 right-0 p-8 text-outline/10 pointer-events-none select-none">
+        <span className="material-symbols-outlined text-[180px]">cloud</span>
       </div>
     </section>
   )

@@ -1,5 +1,3 @@
-import logoCoqui from '/images/logo-coqui-creative.png'
-
 export default function AboutBook() {
   const checks = [
     'Explora el encanto del bosque El Yunque.',
@@ -45,7 +43,7 @@ export default function AboutBook() {
 
             <div className="pt-8 border-t border-outline-variant/30">
               <a href="https://coquicreativepr.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 text-on-surface-variant hover:text-primary transition-colors no-underline">
-                <img src={logoCoqui} alt="Coquí Creative" className="w-10 h-10" />
+                <img src="/images/logo-coqui-creative.png" alt="Coquí Creative" className="w-10 h-10" />
                 <div className="text-left">
                   <p className="font-headline-md text-headline-md" style={{fontSize:'18px',color:'#7b535e'}}>Coquí Creative</p>
                   <p className="text-body-md text-on-surface-variant text-sm">Editorial boricua — coquicreativepr.com →</p>

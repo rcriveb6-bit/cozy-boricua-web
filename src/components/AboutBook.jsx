@@ -9,6 +9,18 @@ export default function AboutBook() {
 
   return (
     <section className="py-24 bg-surface-container-low" id="about">
+
+      {/* Coquí Creative branding arriba */}
+      <div className="max-w-container-max mx-auto px-5 md:px-16 mb-12">
+        <a href="https://coquicreativepr.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-4 text-on-surface-variant hover:text-primary transition-colors no-underline">
+          <img src={logoCoqui} alt="Coquí Creative" className="w-14 h-14" />
+          <div className="text-left">
+            <p className="font-headline-md" style={{fontSize:'22px',color:'#7b535e',fontWeight:600}}>Coquí Creative</p>
+            <p className="text-body-md text-on-surface-variant">coquicreativepr.com →</p>
+          </div>
+        </a>
+      </div>
+
       <div className="max-w-container-max mx-auto px-5 md:px-16">
         <div className="grid md:grid-cols-2 gap-16 items-center">
 
@@ -42,16 +54,6 @@ export default function AboutBook() {
                 </li>
               ))}
             </ul>
-
-            <div className="pt-8 border-t border-outline-variant/30">
-              <a href="https://coquicreativepr.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 text-on-surface-variant hover:text-primary transition-colors no-underline">
-                <img src={logoCoqui} alt="Coquí Creative" className="w-10 h-10" />
-                <div className="text-left">
-                  <p className="font-headline-md text-headline-md" style={{fontSize:'18px',color:'#7b535e'}}>Coquí Creative</p>
-                  <p className="text-body-md text-on-surface-variant text-sm">Editorial boricua — coquicreativepr.com →</p>
-                </div>
-              </a>
-            </div>
 
           </div>
 

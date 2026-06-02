@@ -45,7 +45,7 @@ export default function Footer() {
 
         <div className="border-t border-outline-variant/30 py-6 text-center px-5">
           <div className="flex items-center justify-center gap-2 mb-2">
-            <img src={logoCoqui} alt="Coquí Creative" className="w-6 h-6" />
+            <img src={logoCoqui} alt="Coquí Creative" className="w-6 h-6 opacity-70" />
             <span className="font-headline-md text-headline-md text-secondary">Coquí Creative</span>
           </div>
           <p className="text-on-surface-variant text-body-md">

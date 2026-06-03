@@ -21,11 +21,11 @@ export default function Hero() {
             Colorear la isla que llevas en el corazón
           </span>
 
-          <h1 className="font-display-lg text-[42px] md:text-display-lg leading-tight text-balance">
+          <h1 className="font-display-lg text-[42px] md:text-display-lg leading-tight">
             EL PRIMER LIBRO <span className="italic">KAWAII</span> DE PUERTO RICO
           </h1>
 
-          <p className="text-body-lg font-body-lg max-w-lg opacity-80 text-pretty">
+          <p className="text-body-lg font-body-lg max-w-lg opacity-80">
             Cozy Boricua — páginas únicas inspiradas en la magia de la isla. Para todas las edades, para toda la familia boricua.
           </p>
 
@@ -34,14 +34,14 @@ export default function Hero() {
               href={links.amazon}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-surface text-primary px-8 py-3 rounded-lg text-label-md font-label-md transition-all duration-150 hover:bg-surface-container-low hover:-translate-y-px hover:shadow-[0_6px_14px_-3px_rgb(0_0_0/0.12)] active:translate-y-0 uppercase tracking-widest no-underline"
+              className="bg-surface text-primary px-8 py-3 rounded-lg text-label-md font-label-md hover:bg-surface-container-low transition-all uppercase tracking-widest no-underline"
               onClick={() => window.gtag?.('event', 'click_amazon_hero')}
             >
               Comprar — {links.price}
             </a>
             <a
               href="#gallery"
-              className="border border-on-primary/70 px-8 py-3 rounded-lg text-label-md font-label-md transition-all duration-150 hover:bg-white/10 hover:border-on-primary hover:-translate-y-px active:translate-y-0 uppercase tracking-widest no-underline"
+              className="border border-on-primary px-8 py-3 rounded-lg text-label-md font-label-md hover:bg-white/10 transition-all uppercase tracking-widest no-underline"
             >
               Ver páginas
             </a>
@@ -54,7 +54,7 @@ export default function Hero() {
             <img
               src="/images/cover.jpg"
               alt="Cozy Boricua Book Cover"
-              className="w-full h-full object-cover organic-shape shadow-2xl transition-transform duration-700 ease-out hover:rotate-0"
+              className="w-full h-full object-cover organic-shape shadow-2xl hover:rotate-0 transition-transform duration-500"
               style={{ transform: 'rotate(2deg)' }}
             />
             <span className="material-symbols-outlined absolute -top-4 -right-4 text-primary-container text-5xl opacity-40 select-none" style={{ fontVariationSettings: "'FILL' 1" }}>eco</span>

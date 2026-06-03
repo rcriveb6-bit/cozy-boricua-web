@@ -52,9 +52,9 @@ export default function PageCards() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
           {cards.map((card, i) => (
             <div key={i} className={`flex flex-col gap-4 group ${card.mt}`}>
-              <div className="aspect-[3/4] rounded-xl overflow-hidden bg-white/50 border border-outline-variant/30 relative shadow-[var(--shadow-sm)] group-hover:shadow-[var(--shadow-lg)] transition-shadow duration-300">
+              <div className="aspect-[3/4] rounded-xl overflow-hidden bg-white/50 border border-outline-variant/30 relative">
                 <img
-                  className="w-full h-full object-cover mix-blend-multiply transition-transform duration-500 ease-out group-hover:scale-[1.07]"
+                  className="w-full h-full object-cover mix-blend-multiply group-hover:scale-110 transition-transform duration-500"
                   src={card.src}
                   alt={card.title}
                 />
@@ -78,7 +78,7 @@ export default function PageCards() {
             href={links.amazon}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-secondary text-on-secondary px-10 py-3 rounded-lg text-label-md font-label-md transition-all duration-150 hover:opacity-90 hover:-translate-y-px hover:shadow-[0_6px_16px_-4px_rgb(106_92_82/0.35)] active:translate-y-0 uppercase tracking-widest no-underline"
+            className="inline-block bg-secondary text-on-secondary px-10 py-3 rounded-lg text-label-md font-label-md hover:opacity-90 transition-all uppercase tracking-widest no-underline"
           >
             Ver en Amazon — {links.price}
           </a>

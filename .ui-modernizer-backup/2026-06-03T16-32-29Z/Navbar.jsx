@@ -19,7 +19,7 @@ export default function Navbar() {
   ]
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 bg-surface/95 backdrop-blur-md border-b border-outline-variant/60 transition-all duration-300 ${scrolled ? 'shadow-[0_4px_12px_-2px_rgb(0_0_0/0.08)]' : ''}`}>
+    <header className={`fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-sm border-b border-outline-variant transition-all duration-300 ${scrolled ? 'shadow-md' : ''}`}>
       <nav className="flex justify-between items-center w-full px-4 md:px-6 max-w-[1200px] mx-auto h-20">
 
         <a href="#" className="font-headline-lg text-headline-md text-primary italic no-underline order-2 md:order-1">
@@ -28,7 +28,7 @@ export default function Navbar() {
 
         <div className="hidden md:flex gap-8 order-2">
           {navLinks.map(([href, label]) => (
-            <a key={href} href={href} className="text-on-surface-variant hover:text-primary transition-colors duration-150 text-label-md font-label-md no-underline relative after:absolute after:bottom-0 after:left-0 after:h-[1.5px] after:w-0 after:bg-primary after:transition-[width] after:duration-200 hover:after:w-full">
+            <a key={href} href={href} className="text-on-surface-variant hover:text-primary transition-colors text-label-md font-label-md no-underline">
               {label}
             </a>
           ))}
@@ -39,7 +39,7 @@ export default function Navbar() {
             href={links.amazon}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden md:flex bg-primary text-on-primary px-6 py-2 rounded-lg text-label-md font-label-md transition-all duration-150 hover:opacity-90 hover:-translate-y-px hover:shadow-[0_4px_10px_-2px_rgb(67_99_85/0.35)] active:scale-95 active:translate-y-0 no-underline"
+            className="hidden md:flex bg-primary text-on-primary px-6 py-2 rounded-lg text-label-md font-label-md hover:opacity-90 transition-all active:scale-95 no-underline"
           >
             Comprar ahora
           </a>

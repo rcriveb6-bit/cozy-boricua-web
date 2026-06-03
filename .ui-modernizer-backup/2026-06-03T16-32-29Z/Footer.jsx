@@ -27,17 +27,17 @@ export default function Footer() {
         <div className="grid grid-cols-2 gap-12 md:gap-24">
           <div className="flex flex-col gap-3">
             <p className="text-label-md font-label-md text-primary uppercase tracking-widest mb-2">Libro</p>
-            <a href={links.amazon} target="_blank" rel="noopener noreferrer" className="text-on-surface-variant hover:text-primary transition-colors duration-150 no-underline hover:underline underline-offset-2">Comprar en Amazon</a>
-            <a href="#gallery" className="text-on-surface-variant hover:text-primary transition-colors duration-150 no-underline hover:underline underline-offset-2">Ver páginas</a>
-            <a href="#personajes" className="text-on-surface-variant hover:text-primary transition-colors duration-150 no-underline hover:underline underline-offset-2">Personajes</a>
-            <a href="#about" className="text-on-surface-variant hover:text-primary transition-colors duration-150 no-underline hover:underline underline-offset-2">Sobre el libro</a>
+            <a href={links.amazon} target="_blank" rel="noopener noreferrer" className="text-on-surface-variant hover:text-primary transition-all no-underline">Comprar en Amazon</a>
+            <a href="#gallery" className="text-on-surface-variant hover:text-primary transition-all no-underline">Ver páginas</a>
+            <a href="#personajes" className="text-on-surface-variant hover:text-primary transition-all no-underline">Personajes</a>
+            <a href="#about" className="text-on-surface-variant hover:text-primary transition-all no-underline">Sobre el libro</a>
           </div>
           <div className="flex flex-col gap-3">
             <p className="text-label-md font-label-md text-primary uppercase tracking-widest mb-2">Social</p>
-            <a href={links.instagram} target="_blank" rel="noopener noreferrer" className="text-on-surface-variant hover:text-primary transition-colors duration-150 no-underline hover:underline underline-offset-2">Instagram</a>
-            <a href={links.tiktok} target="_blank" rel="noopener noreferrer" className="text-on-surface-variant hover:text-primary transition-colors duration-150 no-underline hover:underline underline-offset-2">TikTok</a>
-            <a href="#" className="text-on-surface-variant hover:text-primary transition-colors duration-150 no-underline hover:underline underline-offset-2">Pinterest</a>
-            <a href="#" className="text-on-surface-variant hover:text-primary transition-colors duration-150 no-underline hover:underline underline-offset-2">Política de privacidad</a>
+            <a href={links.instagram} target="_blank" rel="noopener noreferrer" className="text-on-surface-variant hover:text-primary transition-all no-underline">Instagram</a>
+            <a href={links.tiktok} target="_blank" rel="noopener noreferrer" className="text-on-surface-variant hover:text-primary transition-all no-underline">TikTok</a>
+            <a href="#" className="text-on-surface-variant hover:text-primary transition-all no-underline">Pinterest</a>
+            <a href="#" className="text-on-surface-variant hover:text-primary transition-all no-underline">Política de privacidad</a>
           </div>
         </div>
 

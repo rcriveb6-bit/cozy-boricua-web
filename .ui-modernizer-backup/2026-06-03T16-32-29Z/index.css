@@ -110,24 +110,9 @@
 
   /* ── Max width ── */
   --max-width-container-max: 1200px;
-
-  /* ── 2026 Motion tokens ── */
-  --ease-spring:   cubic-bezier(0.34, 1.56, 0.64, 1);
-  --ease-out:      cubic-bezier(0.16, 1, 0.3, 1);
-  --ease-in-out:   cubic-bezier(0.65, 0, 0.35, 1);
-  --duration-fast: 120ms;
-  --duration-base: 200ms;
-  --duration-slow: 400ms;
-
-  /* ── Shadow scale ── */
-  --shadow-xs:  0 1px 2px 0 rgb(0 0 0 / 0.04);
-  --shadow-sm:  0 1px 3px 0 rgb(0 0 0 / 0.07), 0 1px 2px -1px rgb(0 0 0 / 0.04);
-  --shadow-md:  0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.04);
-  --shadow-lg:  0 10px 15px -3px rgb(0 0 0 / 0.07), 0 4px 6px -4px rgb(0 0 0 / 0.04);
-  --shadow-xl:  0 20px 25px -5px rgb(0 0 0 / 0.07), 0 8px 10px -6px rgb(0 0 0 / 0.04);
 }
 
-*, *::before, *::after {
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -139,20 +124,6 @@ body {
   font-family: "Plus Jakarta Sans", sans-serif;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-}
-
-::selection {
-  background-color: #c7ebd9;
-  color: #002116;
-}
-
-/* ── Focus ring ── */
-:focus-visible {
-  outline: 2px solid #436355;
-  outline-offset: 2px;
-  border-radius: 2px;
 }
 
 /* ── Organic blob shape for images ── */
@@ -170,37 +141,16 @@ body {
   -webkit-mask-size: cover;
 }
 
-/* ── Scroll reveal — spring easing ── */
+/* ── Scroll reveal ── */
 .reveal {
   opacity: 0;
-  transform: translateY(1.5rem);
-  transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
+  transform: translateY(2rem);
+  transition: opacity 1s ease, transform 1s ease;
 }
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
 }
-
-/* ── Image hover zoom utility ── */
-.img-zoom {
-  overflow: hidden;
-}
-.img-zoom img {
-  transition: transform 0.6s var(--ease-out);
-  will-change: transform;
-}
-.img-zoom:hover img {
-  transform: scale(1.05);
-}
-
-/* ── Button base upgrade ── */
-.btn-primary {
-  transition: opacity var(--duration-base) var(--ease-out),
-              transform var(--duration-fast) var(--ease-out),
-              box-shadow var(--duration-base) var(--ease-out);
-}
-.btn-primary:hover  { opacity: 0.92; transform: translateY(-1px); box-shadow: var(--shadow-md); }
-.btn-primary:active { opacity: 1;    transform: translateY(0);    box-shadow: var(--shadow-xs); }
 
 /* ── Material Symbols ── */
 .material-symbols-outlined {

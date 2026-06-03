@@ -37,13 +37,12 @@ export default function SocialGrid() {
 
         <div className="grid grid-cols-3 md:grid-cols-5 gap-3">
           {photos.map((photo, i) => (
-            <div key={i} className="aspect-square rounded-lg overflow-hidden relative group cursor-pointer">
+            <div key={i} className="aspect-square rounded-lg overflow-hidden">
               <img
-                className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.08]"
+                className="w-full h-full object-cover hover:scale-110 transition-all duration-500"
                 src={photo.src}
                 alt={photo.alt}
               />
-              <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/15 transition-colors duration-300 rounded-lg" />
             </div>
           ))}
         </div>

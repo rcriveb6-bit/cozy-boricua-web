@@ -10,7 +10,7 @@ export default function Community() {
   return (
     <section className="bg-primary py-16 md:py-20 text-on-primary" id="comunidad">
       <div className="max-w-[1200px] mx-auto px-4 md:px-6">
-        <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 bg-white/5 p-6 md:p-10 rounded-[40px] border border-white/10 backdrop-blur-md shadow-[inset_0_1px_0_0_rgb(255_255_255/0.08)]">
+        <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 bg-white/5 p-6 md:p-10 rounded-[40px] border border-white/10 backdrop-blur-sm">
 
           {/* Text */}
           <div className="md:w-1/2 space-y-6">
@@ -56,7 +56,7 @@ export default function Community() {
                 href={links.amazon}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-surface text-primary px-6 py-2 rounded-lg text-label-md font-label-md transition-all duration-150 hover:bg-surface-container-low hover:-translate-y-px hover:shadow-[0_4px_10px_-2px_rgb(0_0_0/0.12)] active:translate-y-0 uppercase tracking-widest no-underline"
+                className="bg-surface text-primary px-6 py-2 rounded-lg text-label-md font-label-md hover:bg-surface-container-low transition-all uppercase tracking-widest no-underline"
               >
                 Comprar en Amazon
               </a>
@@ -66,7 +66,7 @@ export default function Community() {
           {/* Image */}
           <div className="md:w-1/2 relative">
             <img
-              className="w-full h-auto rounded-3xl shadow-2xl max-h-[350px] object-cover transition-transform duration-700 ease-out hover:rotate-0"
+              className="w-full h-auto rounded-3xl shadow-2xl max-h-[350px] object-cover hover:rotate-0 transition-transform duration-500"
               style={{ transform: 'rotate(2deg)' }}
               src="/images/page-4.jpg"
               alt="Página coloreada de Cozy Boricua"

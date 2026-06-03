@@ -26,7 +26,7 @@ export default function Features() {
       <div className="max-w-[1200px] mx-auto px-4 md:px-6 relative z-10 pt-16">
         <div className="grid md:grid-cols-3 gap-8 text-center">
           {features.map((f, i) => (
-            <div key={i} className="p-8 rounded-xl bg-white/50 transition-all duration-200 hover:-translate-y-1 hover:shadow-[var(--shadow-md)] hover:bg-white/70">
+            <div key={i} className="p-8 rounded-xl bg-white/50">
               <div className="w-16 h-16 bg-primary-container text-primary rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="material-symbols-outlined text-4xl" style={{ fontVariationSettings: "'FILL' 1" }}>
                   {f.icon}

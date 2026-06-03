@@ -3,14 +3,13 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import AboutBook from './components/AboutBook'
 import PagePreview from './components/PagePreview'
-import Features from './components/Features'
-import Characters from './components/Characters'
+import PageCards from './components/PageCards'
 import Community from './components/Community'
+import SocialGrid from './components/SocialGrid'
 import Footer from './components/Footer'
 
 export default function App() {
   useEffect(() => {
-    // Scroll reveal
     const observer = new IntersectionObserver(
       (entries) => entries.forEach(e => {
         if (e.isIntersecting) {
@@ -34,9 +33,9 @@ export default function App() {
         <Hero />
         <AboutBook />
         <PagePreview />
-        <Features />
-        <Characters />
+        <PageCards />
         <Community />
+        <SocialGrid />
       </main>
       <Footer />
     </div>

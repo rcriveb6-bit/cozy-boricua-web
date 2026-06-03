@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import { links } from '../data/links'
-import logoCoqui from '../assets/logo-coqui-creative.png'
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
@@ -23,8 +22,7 @@ export default function Navbar() {
     <header className={`fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-sm border-b border-outline-variant transition-all duration-300 ${scrolled ? 'shadow-md' : ''}`}>
       <nav className="flex justify-between items-center w-full px-4 md:px-6 max-w-[1200px] mx-auto h-20">
 
-        <a href="#" className="font-headline-lg text-headline-md text-primary italic no-underline order-2 md:order-1 flex items-center gap-2">
-          <img src={logoCoqui} alt="Coquí Creative" className="h-8 w-auto" />
+        <a href="#" className="font-headline-lg text-headline-md text-primary italic no-underline order-2 md:order-1">
           Coquí Creative
         </a>
 

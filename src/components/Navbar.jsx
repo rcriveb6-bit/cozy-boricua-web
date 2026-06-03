@@ -16,8 +16,8 @@ export default function Navbar() {
       <div className="flex justify-between items-center px-5 md:px-16 py-4 max-w-container-max mx-auto w-full">
 
         {/* Logo */}
-        <a className="font-display-lg text-headline-md text-primary tracking-tight flex items-center gap-2 no-underline" href="#">
-          🐸 Cozy Boricua
+        <a href="#" className="no-underline flex items-center">
+          <img src="/images/logo.png" alt="Coquí Creative" className="h-12 w-auto" />
         </a>
 
         {/* Desktop nav */}

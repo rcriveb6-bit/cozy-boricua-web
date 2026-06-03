@@ -8,11 +8,10 @@ export default function Hero() {
         {/* Text */}
         <div className="space-y-8 z-10 text-center md:text-left">
 
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-secondary-container text-on-secondary-container rounded-full text-label-lg font-bold sticker-lift border-0 shadow-none">
-            <span className="material-symbols-outlined text-[18px]" style={{ fontVariationSettings: "'FILL' 1" }}>
-              auto_awesome
-            </span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary-container text-on-primary-container rounded-full text-label-lg font-bold sticker-lift border-0 shadow-none">
+            <span style={{ color: '#E8B830' }}>✦</span>
             ¡LLEGÓ EL COQUÍ!
+            <span style={{ color: '#E8B830' }}>✦</span>
           </div>
 
           <h1 className="font-display-lg text-[42px] md:text-display-lg text-primary leading-tight">
@@ -54,21 +53,17 @@ export default function Hero() {
               src="/images/cover.jpg"
             />
 
-            <div className="absolute -top-10 -right-5 sparkle-float text-primary pointer-events-none">
-              <span className="material-symbols-outlined text-5xl" style={{ fontVariationSettings: "'FILL' 1" }}>colors_spark</span>
-            </div>
-            <div className="absolute -bottom-5 -left-10 sparkle-float-delay text-secondary pointer-events-none">
-              <span className="material-symbols-outlined text-4xl" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
-            </div>
+            <div className="sparkle-float absolute -top-8 -right-4 pointer-events-none" style={{ color: '#E8B830', fontSize: '32px' }}>✦</div>
+            <div className="sparkle-float-delay absolute -bottom-4 -left-8 pointer-events-none" style={{ color: '#4A7A38', fontSize: '24px' }}>✦</div>
+            <div className="sparkle-float absolute top-4 -left-6 pointer-events-none" style={{ color: '#E8B830', fontSize: '18px', animationDelay: '0.8s' }}>✦</div>
           </div>
         </div>
 
       </div>
 
-      {/* BG decoration */}
-      <div className="absolute top-0 right-0 p-8 text-outline/10 pointer-events-none select-none">
-        <span className="material-symbols-outlined text-[180px]">cloud</span>
-      </div>
+      {/* BG decoration stars */}
+      <div className="absolute top-8 right-12 pointer-events-none select-none" style={{ color: 'rgba(74,122,56,0.12)', fontSize: '120px' }}>✦</div>
+      <div className="absolute bottom-8 left-8 pointer-events-none select-none" style={{ color: 'rgba(232,184,48,0.15)', fontSize: '80px' }}>✦</div>
     </section>
   )
 }

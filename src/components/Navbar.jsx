@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { links } from '../data/links'
+import logoCoqui from '../assets/logo-coqui-creative.png'
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)

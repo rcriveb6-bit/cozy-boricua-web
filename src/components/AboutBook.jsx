@@ -1,3 +1,5 @@
+import logoCoqui from '../assets/logo-coqui-creative.png'
+
 export default function AboutBook() {
   const checks = [
     'Explora el encanto del bosque El Yunque.',
@@ -7,6 +9,18 @@ export default function AboutBook() {
 
   return (
     <section className="py-24 bg-surface-container-low" id="about">
+
+      {/* Coquí Creative branding arriba */}
+      <div className="max-w-container-max mx-auto px-5 md:px-16 mb-12">
+        <a href="https://coquicreativepr.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-4 text-on-surface-variant hover:text-primary transition-colors no-underline">
+          <img src={logoCoqui} alt="Coquí Creative" className="w-14 h-14" />
+          <div className="text-left">
+            <p className="font-headline-md" style={{fontSize:'22px',color:'#7b535e',fontWeight:600}}>Coquí Creative</p>
+            <p className="text-body-md text-on-surface-variant">coquicreativepr.com →</p>
+          </div>
+        </a>
+      </div>
+
       <div className="max-w-container-max mx-auto px-5 md:px-16">
         <div className="grid md:grid-cols-2 gap-16 items-center">
 
@@ -28,7 +42,7 @@ export default function AboutBook() {
               Un viaje a colorear por Puerto Rico
             </h2>
             <p className="text-body-lg text-on-surface-variant">
-              <strong>Cozy Boricua</strong> es más que un libro de colorear — es un abrazo cálido de la isla. Creado por <em>Coquí Creative</em>, presenta la reimaginación más adorable de los lugares más icónicos de Puerto Rico.
+              <strong>Cozy Boricua</strong> es más que un libro de colorear — es un abrazo cálido de la isla. Presenta la reimaginación más adorable de los lugares más icónicos de Puerto Rico.
             </p>
             <ul className="space-y-4 pt-4">
               {checks.map((text, i) => (
@@ -40,6 +54,7 @@ export default function AboutBook() {
                 </li>
               ))}
             </ul>
+
           </div>
 
         </div>

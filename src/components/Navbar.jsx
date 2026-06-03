@@ -1,88 +1,65 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { links } from '../data/links'
 import logoCoqui from '../assets/logo-coqui-creative.png'
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 50)
+    window.addEventListener('scroll', onScroll)
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
 
   const navLinks = [
-    ['#gallery', 'Galería'],
     ['#about', 'El libro'],
+    ['#gallery', 'Páginas'],
     ['#personajes', 'Personajes'],
     ['#comunidad', 'Comunidad'],
   ]
 
   return (
-    <header className="bg-background/80 backdrop-blur-md text-primary font-headline-md text-headline-md sticky top-0 border-b-2 border-outline-variant/30 z-50">
-      <div className="flex justify-between items-center px-5 md:px-16 py-4 max-w-container-max mx-auto w-full">
+    <header className={`fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-sm border-b border-outline-variant transition-all duration-300 ${scrolled ? 'shadow-md' : ''}`}>
+      <nav className="flex justify-between items-center w-full px-4 md:px-6 max-w-[1200px] mx-auto h-20">
 
-        {/* Logo */}
-        <a href="#" className="no-underline flex items-center">
-          <img src="/images/logo.png" alt="Coquí Creative" className="h-12 w-auto" />
+        <a href="#" className="font-headline-lg text-headline-md text-primary italic no-underline order-2 md:order-1 flex items-center gap-2">
+          <img src={logoCoqui} alt="Coquí Creative" className="h-8 w-auto" />
+          Coquí Creative
         </a>
 
-        {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex gap-8 order-2">
           {navLinks.map(([href, label]) => (
-            <a
-              key={href}
-              href={href}
-              className="text-on-surface-variant font-body-md text-body-md hover:text-secondary transition-colors duration-300 no-underline"
-            >
+            <a key={href} href={href} className="text-on-surface-variant hover:text-primary transition-colors text-label-md font-label-md no-underline">
               {label}
             </a>
           ))}
-        </nav>
+        </div>
 
-        {/* Actions */}
-        <div className="flex items-center gap-4">
-          <button className="material-symbols-outlined text-primary hover:text-secondary transition-colors hidden md:block">
-            favorite
-          </button>
-          <button className="material-symbols-outlined text-primary hover:text-secondary transition-colors hidden md:block">
-            shopping_cart
-          </button>
+        <div className="flex items-center gap-4 order-3">
           <a
             href={links.amazon}
             target="_blank"
             rel="noopener noreferrer"
-            className="sticker-lift bg-primary text-on-primary px-6 py-2 rounded-full font-label-lg text-label-lg no-underline active:scale-95 hidden md:inline-flex items-center gap-1"
+            className="hidden md:flex bg-primary text-on-primary px-6 py-2 rounded-lg text-label-md font-label-md hover:opacity-90 transition-all active:scale-95 no-underline"
           >
-            Comprar
-            <span className="material-symbols-outlined text-[16px]">shopping_bag</span>
+            Comprar ahora
           </a>
-
-          {/* Mobile hamburger */}
-          <button
-            className="md:hidden p-2 text-primary"
-            onClick={() => setOpen(o => !o)}
-            aria-label="Menú"
-          >
+          <button className="md:hidden p-2 hover:bg-surface-container-low rounded-full transition-all" onClick={() => setOpen(o => !o)} aria-label="Menú">
             <span className="material-symbols-outlined">{open ? 'close' : 'menu'}</span>
           </button>
         </div>
-      </div>
+      </nav>
 
-      {/* Mobile dropdown */}
       {open && (
-        <div className="md:hidden bg-background border-t border-outline-variant/30 px-5 pb-5 pt-3 space-y-1">
+        <div className="md:hidden bg-surface border-t border-outline-variant px-4 pb-6 pt-4 space-y-1">
           {navLinks.map(([href, label]) => (
-            <a
-              key={href}
-              href={href}
-              onClick={() => setOpen(false)}
-              className="block py-3 text-on-surface-variant font-body-md text-body-md border-b border-outline-variant/20 no-underline hover:text-secondary transition-colors"
-            >
+            <a key={href} href={href} onClick={() => setOpen(false)} className="block py-3 text-on-surface-variant text-body-md border-b border-outline-variant/30 no-underline hover:text-primary transition-colors">
               {label}
             </a>
           ))}
-          <a
-            href={links.amazon}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="sticker-lift bg-primary text-on-primary px-6 py-3 rounded-full font-label-lg text-label-lg no-underline inline-flex items-center gap-2 mt-4"
-          >
-            Comprar en Amazon → {links.price}
+          <a href={links.amazon} target="_blank" rel="noopener noreferrer" className="mt-4 inline-block bg-primary text-on-primary px-6 py-3 rounded-lg text-label-md font-label-md no-underline">
+            Comprar en Amazon — {links.price}
           </a>
         </div>
       )}

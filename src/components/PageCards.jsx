@@ -19,75 +19,75 @@ const cards = [
     src: '/images/page-3.jpg',
     category: 'B/W para colorear',
     title: 'Cocina Boricua',
-    price: '30+ páginas',
+    price: 'Diseños originales',
     mt: 'md:-mt-8',
   },
   {
     src: '/images/page-4.jpg',
-    category: 'Escenas históricas',
+    category: 'Escenas de Puerto Rico',
     title: 'El Morro',
-    price: 'Glosario bilingüe',
+    price: 'Historia viva',
     mt: 'md:mt-16',
   },
 ]
 
 export default function PageCards() {
   return (
-    <section className="bg-secondary-container relative overflow-hidden py-16 md:py-24">
-
-      {/* Wavy top */}
-      <div className="absolute top-0 left-0 w-full h-32 bg-surface wavy-divider" />
-
-      <div className="max-w-[1200px] mx-auto px-4 md:px-6 relative z-10 pt-16">
-
-        <div className="text-center mb-16">
-          <h2 className="font-headline-lg text-headline-lg text-secondary italic mb-4">
-            Lo Más Querido
+    <section className="py-20 md:py-28 bg-surface-container-low px-4 md:px-8">
+      <div className="max-w-[1200px] mx-auto space-y-12">
+        {/* Header */}
+        <div className="text-center space-y-3">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-accent-teal/10 rounded-full text-sm font-label text-accent-teal tracking-wider">
+            ✦ LO MÁS QUERIDO
+          </div>
+          <h2 className="font-display text-3xl md:text-4xl text-on-surface">
+            Personajes y lugares favoritos
           </h2>
-          <p className="text-on-secondary-container/80 max-w-xl mx-auto text-body-md">
-            Páginas favoritas que capturan la magia única de Puerto Rico.
+          <p className="text-on-surface-variant max-w-lg mx-auto">
+            Cada página es un pedacito de la isla.
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+        {/* Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {cards.map((card, i) => (
-            <div key={i} className={`flex flex-col gap-4 group ${card.mt}`}>
-              <div className="aspect-[3/4] rounded-xl overflow-hidden bg-white/50 border border-outline-variant/30 relative shadow-[var(--shadow-sm)] group-hover:shadow-[var(--shadow-lg)] transition-shadow duration-300">
+            <div
+              key={i}
+              className={`group relative bg-white rounded-2xl overflow-hidden kawaii-shadow transition-all duration-300 hover:-translate-y-1 ${card.mt}`}
+            >
+              <div className="aspect-[3/4] overflow-hidden">
                 <img
-                  className="w-full h-full object-cover mix-blend-multiply transition-transform duration-500 ease-out group-hover:scale-[1.07]"
                   src={card.src}
                   alt={card.title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                {i === 0 && (
-                  <span className="absolute top-3 right-3 bg-primary text-on-primary text-[10px] uppercase font-bold tracking-widest px-2 py-1 rounded">
-                    Nuevo
-                  </span>
-                )}
               </div>
-              <div className="text-center">
-                <p className="text-label-md font-label-md text-secondary/70">{card.category}</p>
-                <h4 className="font-headline-md text-headline-md text-secondary">{card.title}</h4>
-                <p className="text-body-md font-bold text-primary mt-1">{card.price}</p>
+
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+
+              <div className="absolute bottom-0 left-0 right-0 p-5 space-y-1">
+                <span className="text-accent-gold text-xs font-label tracking-widest uppercase">
+                  {card.category}
+                </span>
+                <h3 className="font-display text-xl text-white">{card.title}</h3>
+                <p className="text-white/70 text-sm">{card.price}</p>
               </div>
             </div>
           ))}
         </div>
 
-        <div className="mt-16 text-center">
+        {/* CTA */}
+        <div className="text-center pt-4">
           <a
             href={links.amazon}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-secondary text-on-secondary px-10 py-3 rounded-lg text-label-md font-label-md transition-all duration-150 hover:opacity-90 hover:-translate-y-px hover:shadow-[0_6px_16px_-4px_rgb(106_92_82/0.35)] active:translate-y-0 uppercase tracking-widest no-underline"
+            className="inline-flex items-center gap-2 bg-accent-coral text-white px-8 py-3.5 rounded-full text-sm font-bold tracking-wider uppercase transition-all duration-200 hover:bg-accent-coral/90 hover:-translate-y-0.5 hover:shadow-[0_8px_20px_-4px_rgba(224,122,95,0.4)] active:translate-y-0 no-underline"
           >
-            Ver en Amazon — {links.price}
+            🛒 VER EN AMAZON — {links.price}
           </a>
         </div>
-
       </div>
-
-      {/* Wavy bottom → bg-primary */}
-      <div className="absolute bottom-0 left-0 w-full h-32 bg-primary wavy-divider rotate-180" />
     </section>
   )
 }

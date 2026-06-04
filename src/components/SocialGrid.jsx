@@ -10,54 +10,36 @@ const photos = [
 
 export default function SocialGrid() {
   return (
-    <section className="py-12 md:py-16 bg-surface">
-      <div className="max-w-[1200px] mx-auto px-4 md:px-6">
+    <section className="py-16 md:py-20 bg-surface px-4 md:px-8">
+      <div className="max-w-[1200px] mx-auto space-y-8">
 
-        <div className="flex justify-between items-end mb-8">
-          <div>
-            <h2 className="font-headline-lg text-headline-md md:text-headline-lg text-primary italic">
-              Una vida hermosa
-            </h2>
-            <p className="text-on-surface-variant text-sm">
-              está en los <span className="italic">detalles</span>.
-            </p>
-          </div>
-          <a
-            href={links.instagram}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden md:flex items-center gap-2 text-label-md font-label-md text-primary group text-xs no-underline"
-          >
-            SEGUIR @COQUICREATIVE
-            <span className="material-symbols-outlined transition-transform group-hover:translate-x-1 text-sm">
-              arrow_forward
-            </span>
-          </a>
+        <div className="text-center space-y-2">
+          <h2 className="font-display text-2xl md:text-3xl text-on-surface">
+            Una vida hermosa ✨
+          </h2>
+          <p className="text-on-surface-variant text-sm">
+            Sigue a <strong>@coquicreative</strong> y comparte tu arte.
+          </p>
         </div>
 
-        <div className="grid grid-cols-3 md:grid-cols-5 gap-3">
+        <div className="insta-grid max-w-[500px] mx-auto rounded-2xl overflow-hidden kawaii-shadow">
           {photos.map((photo, i) => (
-            <div key={i} className="aspect-square rounded-lg overflow-hidden relative group cursor-pointer">
-              <img
-                className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.08]"
-                src={photo.src}
-                alt={photo.alt}
-              />
-              <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/15 transition-colors duration-300 rounded-lg" />
+            <div key={i}>
+              <img src={photo.src} alt={photo.alt} loading="lazy" />
             </div>
           ))}
         </div>
 
-        <a
-          href={links.instagram}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="md:hidden flex items-center gap-2 text-label-md font-label-md text-primary mt-6 text-xs no-underline"
-        >
-          SEGUIR @COQUICREATIVE
-          <span className="material-symbols-outlined text-sm">arrow_forward</span>
-        </a>
-
+        <div className="text-center pt-2">
+          <a
+            href={links.instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-primary hover:text-primary-container transition-colors text-sm font-label tracking-wider no-underline"
+          >
+            @coquicreative →
+          </a>
+        </div>
       </div>
     </section>
   )

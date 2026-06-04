@@ -20,21 +20,31 @@ export default function App() {
       { threshold: 0.1 }
     )
     document.querySelectorAll('section').forEach(s => {
-      s.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-8')
+      s.classList.add('transition-all', 'duration-800', 'opacity-0', 'translate-y-8')
       observer.observe(s)
     })
     return () => observer.disconnect()
   }, [])
 
   return (
-    <div style={{ minHeight: '100vh' }}>
+    <div className="overflow-x-hidden">
       <Navbar />
       <main>
         <Hero />
-        <AboutBook />
-        <PagePreview />
+        <div className="relative">
+          <div className="wave-divider" />
+          <AboutBook />
+        </div>
+        <div className="relative bg-primary/5">
+          <div className="wave-divider wave-divider-flip bg-primary/5" style={{ background: 'var(--color-primary/0.05)' }} />
+          <PagePreview />
+          <div className="wave-divider bg-primary/5" style={{ background: 'var(--color-primary/0.05)' }} />
+        </div>
         <PageCards />
-        <Community />
+        <div className="relative bg-surface-container-low">
+          <div className="wave-divider wave-divider-flip" />
+          <Community />
+        </div>
         <SocialGrid />
       </main>
       <Footer />

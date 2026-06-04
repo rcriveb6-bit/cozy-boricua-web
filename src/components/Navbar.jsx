@@ -14,53 +14,88 @@ export default function Navbar() {
   const navLinks = [
     ['#about', 'El libro'],
     ['#gallery', 'Páginas'],
-    ['#personajes', 'Personajes'],
-    ['#comunidad', 'Comunidad'],
+    ['#gallery', 'Personajes'],
+    ['#about', 'Comunidad'],
   ]
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 bg-surface/95 backdrop-blur-md border-b border-outline-variant/60 transition-all duration-300 ${scrolled ? 'shadow-[0_4px_12px_-2px_rgb(0_0_0/0.08)]' : ''}`}>
-      <nav className="flex justify-between items-center w-full px-4 md:px-6 max-w-[1200px] mx-auto h-20">
-
-        <a href="#" className="font-headline-lg text-headline-md text-primary italic no-underline order-2 md:order-1">
-          Coquí Creative
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      scrolled
+        ? 'bg-white/80 backdrop-blur-lg shadow-[0_2px_12px_-4px_rgba(0,0,0,0.08)]'
+        : 'bg-transparent'
+    }`}>
+      <div className="max-w-[1200px] mx-auto px-4 md:px-8 flex items-center justify-between h-16 md:h-20">
+        {/* Logo */}
+        <a href="#" className="font-display text-lg md:text-xl text-primary no-underline hover:opacity-80 transition-opacity">
+          {links.brandName}
         </a>
 
-        <div className="hidden md:flex gap-8 order-2">
+        {/* Desktop nav */}
+        <div className="hidden md:flex items-center gap-8">
           {navLinks.map(([href, label]) => (
-            <a key={href} href={href} className="text-on-surface-variant hover:text-primary transition-colors duration-150 text-label-md font-label-md no-underline relative after:absolute after:bottom-0 after:left-0 after:h-[1.5px] after:w-0 after:bg-primary after:transition-[width] after:duration-200 hover:after:w-full">
+            <a
+              key={label}
+              href={href}
+              className={`text-sm font-label tracking-wide no-underline transition-colors ${
+                scrolled ? 'text-on-surface hover:text-primary' : 'text-on-primary/80 hover:text-on-primary'
+              }`}
+            >
               {label}
             </a>
           ))}
-        </div>
-
-        <div className="flex items-center gap-4 order-3">
           <a
             href={links.amazon}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden md:flex bg-primary text-on-primary px-6 py-2 rounded-lg text-label-md font-label-md transition-all duration-150 hover:opacity-90 hover:-translate-y-px hover:shadow-[0_4px_10px_-2px_rgb(67_99_85/0.35)] active:scale-95 active:translate-y-0 no-underline"
+            className="bg-accent-coral text-white px-5 py-2 rounded-full text-sm font-bold tracking-wider uppercase transition-all duration-200 hover:bg-accent-coral/90 hover:-translate-y-0.5 active:translate-y-0 no-underline shadow-md"
           >
             Comprar ahora
           </a>
-          <button className="md:hidden p-2 hover:bg-surface-container-low rounded-full transition-all" onClick={() => setOpen(o => !o)} aria-label="Menú">
-            <span className="material-symbols-outlined">{open ? 'close' : 'menu'}</span>
-          </button>
         </div>
-      </nav>
 
+        {/* Mobile hamburger */}
+        <button
+          onClick={() => setOpen(!open)}
+          className="md:hidden flex flex-col gap-1.5 p-2"
+          aria-label="Toggle menu"
+        >
+          <span className={`block w-6 h-0.5 rounded-full transition-all duration-300 ${
+            scrolled ? 'bg-on-surface' : 'bg-on-primary'
+          } ${open ? 'rotate-45 translate-y-2' : ''}`} />
+          <span className={`block w-6 h-0.5 rounded-full transition-all duration-300 ${
+            scrolled ? 'bg-on-surface' : 'bg-on-primary'
+          } ${open ? 'opacity-0' : ''}`} />
+          <span className={`block w-6 h-0.5 rounded-full transition-all duration-300 ${
+            scrolled ? 'bg-on-surface' : 'bg-on-primary'
+          } ${open ? '-rotate-45 -translate-y-2' : ''}`} />
+        </button>
+      </div>
+
+      {/* Mobile menu */}
       {open && (
-        <div className="md:hidden bg-surface border-t border-outline-variant px-4 pb-6 pt-4 space-y-1">
-          {navLinks.map(([href, label]) => (
-            <a key={href} href={href} onClick={() => setOpen(false)} className="block py-3 text-on-surface-variant text-body-md border-b border-outline-variant/30 no-underline hover:text-primary transition-colors">
-              {label}
+        <div className="md:hidden bg-white/95 backdrop-blur-lg border-t border-outline-variant">
+          <div className="px-4 py-6 space-y-4">
+            {navLinks.map(([href, label]) => (
+              <a
+                key={label}
+                href={href}
+                onClick={() => setOpen(false)}
+                className="block text-on-surface font-label text-sm tracking-wide no-underline py-2"
+              >
+                {label}
+              </a>
+            ))}
+            <a
+              href={links.amazon}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block text-center bg-accent-coral text-white px-5 py-3 rounded-full text-sm font-bold tracking-wider uppercase no-underline mt-4"
+            >
+              Comprar ahora
             </a>
-          ))}
-          <a href={links.amazon} target="_blank" rel="noopener noreferrer" className="mt-4 inline-block bg-primary text-on-primary px-6 py-3 rounded-lg text-label-md font-label-md no-underline">
-            Comprar en Amazon — {links.price}
-          </a>
+          </div>
         </div>
       )}
-    </header>
+    </nav>
   )
 }

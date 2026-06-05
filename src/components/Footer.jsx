@@ -48,7 +48,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-on-primary/40 text-xs">
-          <p>© 2026 {links.brandName}. Hecho con amor desde Puerto Rico 🇵🇷</p>
+          <p>© 2026 {links.brandName}</p>
           <div className="flex gap-4">
             <span className="tracking-widest uppercase">{links.seriesName} Series</span>
             <span>•</span>

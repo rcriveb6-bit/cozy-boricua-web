@@ -70,20 +70,5 @@ export const characters = [
     quote: "Despacio y con calma, que el mar no tiene prisa.",
     bgColor: "#E8F6FB",
     accentColor: "#0077B6"
-  },
-]
-
-export const secondaryCharacters = [
-  {
-    id: "mundi",
-    emoji: "🐘",
-    name: "Mundi",
-    species: "Elefante kawaii",
-    icon: "Su nombre en su escena única",
-    img: null,
-    personality: "Misteriosa y especial. Grande en tamaño, grande en corazón.",
-    quote: "Grande por fuera, ternura por dentro.",
-    bgColor: "#EEF2FF",
-    accentColor: "#6C63FF"
   }
 ]

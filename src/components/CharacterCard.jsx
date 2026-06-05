@@ -1,5 +1,5 @@
 export default function CharacterCard({ character }) {
-  const { img, emoji, name, species, quote, bgColor, accentColor } = character
+  const { emoji, name, species, quote, bgColor, accentColor } = character
 
   return (
     <div
@@ -13,17 +13,8 @@ export default function CharacterCard({ character }) {
       onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.05)'}
       onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
     >
-      <div style={{ fontSize: img ? '0' : '52px', textAlign: 'center', marginBottom: '12px', lineHeight: 1 }}>
-        {img ? (
-          <img
-            src={img}
-            alt={name}
-            className="w-full h-auto max-w-[120px] mx-auto"
-            style={{ filter: 'drop-shadow(2px 2px 4px rgba(0,0,0,0.1))' }}
-          />
-        ) : (
-          emoji
-        )}
+      <div style={{ fontSize: '52px', textAlign: 'center', marginBottom: '12px', lineHeight: 1 }}>
+        {emoji}
       </div>
       <h3 style={{ fontFamily: '"Quicksand", sans-serif', fontWeight: 700, color: accentColor, fontSize: '20px', marginBottom: '4px' }}>
         {name}

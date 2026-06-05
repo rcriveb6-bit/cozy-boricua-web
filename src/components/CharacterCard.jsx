@@ -1,8 +1,5 @@
 export default function CharacterCard({ character }) {
-  const { id, emoji, name, species, quote, bgColor, accentColor } = character
-
-  // Solo Churi no tiene PNG — usar emoji
-  const hasImage = id !== 'churi'
+  const { img, emoji, name, species, quote, bgColor, accentColor } = character
 
   return (
     <div
@@ -16,10 +13,10 @@ export default function CharacterCard({ character }) {
       onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.05)'}
       onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
     >
-      <div style={{ fontSize: hasImage ? '0' : '52px', textAlign: 'center', marginBottom: '12px', lineHeight: 1 }}>
-        {hasImage ? (
+      <div style={{ fontSize: img ? '0' : '52px', textAlign: 'center', marginBottom: '12px', lineHeight: 1 }}>
+        {img ? (
           <img
-            src={`/characters/${id}.png`}
+            src={img}
             alt={name}
             className="w-full h-auto max-w-[120px] mx-auto"
             style={{ filter: 'drop-shadow(2px 2px 4px rgba(0,0,0,0.1))' }}

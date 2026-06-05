@@ -1,4 +1,4 @@
-import { characters } from '../data/characters'
+import { characters, secondaryCharacters } from '../data/characters'
 import CharacterCard from './CharacterCard'
 
 export default function Characters() {
@@ -10,7 +10,7 @@ export default function Characters() {
             Conoce a los personajes
           </h2>
           <p className="text-body-md text-on-surface-variant">
-            Siete amigos listos para explorar contigo la isla.
+            Seis amigos listos para explorar contigo la isla.
           </p>
         </div>
 
@@ -19,6 +19,19 @@ export default function Characters() {
             <CharacterCard key={char.id} character={char} />
           ))}
         </div>
+
+        {secondaryCharacters.length > 0 && (
+          <div className="mt-16">
+            <h3 className="text-center text-title-md font-medium text-on-surface-variant mb-8">
+              ⭐ También aparecen
+            </h3>
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 opacity-75">
+              {secondaryCharacters.map(char => (
+                <CharacterCard key={char.id} character={char} />
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </section>
   )

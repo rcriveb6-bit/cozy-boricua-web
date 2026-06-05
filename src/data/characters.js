@@ -71,6 +71,9 @@ export const characters = [
     bgColor: "#E8F6FB",
     accentColor: "#0077B6"
   },
+]
+
+export const secondaryCharacters = [
   {
     id: "mundi",
     emoji: "🐘",

@@ -1,9 +1,9 @@
 export default function CharacterCard({ character }) {
-  const { emoji, name, species, quote, bgColor, accentColor } = character
+  const { img, emoji, name, species, quote, bgColor, accentColor } = character
 
   return (
     <div
-      className="rounded-xl p-6 text-center"
+      className="rounded-xl p-6 text-center flex flex-col items-center justify-between h-full"
       style={{
         backgroundColor: bgColor,
         border: `2px solid ${accentColor}`,
@@ -13,8 +13,17 @@ export default function CharacterCard({ character }) {
       onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.05)'}
       onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
     >
-      <div style={{ fontSize: '52px', textAlign: 'center', marginBottom: '12px', lineHeight: 1 }}>
-        {emoji}
+      <div className="flex-1 flex items-center justify-center" style={{ marginBottom: '12px' }}>
+        {img ? (
+          <img
+            src={img}
+            alt={name}
+            className="w-full h-auto"
+            style={{ maxWidth: '140px', filter: 'drop-shadow(2px 2px 4px rgba(0,0,0,0.1))' }}
+          />
+        ) : (
+          <span style={{ fontSize: '52px', lineHeight: 1 }}>{emoji}</span>
+        )}
       </div>
       <h3 style={{ fontFamily: '"Quicksand", sans-serif', fontWeight: 700, color: accentColor, fontSize: '20px', marginBottom: '4px' }}>
         {name}
@@ -22,7 +31,7 @@ export default function CharacterCard({ character }) {
       <p style={{ fontFamily: '"Be Vietnam Pro", sans-serif', color: '#827476', fontSize: '12px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '10px' }}>
         {species}
       </p>
-      <p style={{ fontFamily: '"Be Vietnam Pro", sans-serif', color: '#504446', fontSize: '13px', fontStyle: 'italic', lineHeight: '1.5' }}>
+      <p style={{ fontFamily: '"Be Vietnam Pro", sans-serif', color: '#504446', fontSize: '13px', fontStyle: 'italic', lineHeight: '1.5', maxWidth: '200px' }}>
         &ldquo;{quote}&rdquo;
       </p>
     </div>

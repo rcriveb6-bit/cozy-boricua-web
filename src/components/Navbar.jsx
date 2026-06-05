@@ -15,7 +15,6 @@ export default function Navbar() {
     ['#about', 'El libro'],
     ['#gallery', 'Galería'],
     ['#personajes', 'Personajes'],
-    ['#stickers', 'Stickers'],
     ['#comunidad', 'Comunidad'],
   ]
 

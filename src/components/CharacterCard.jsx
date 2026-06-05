@@ -1,5 +1,8 @@
 export default function CharacterCard({ character }) {
-  const { emoji, name, species, quote, bgColor, accentColor } = character
+  const { id, emoji, name, species, quote, bgColor, accentColor } = character
+
+  // Solo Churi no tiene PNG — usar emoji
+  const hasImage = id !== 'churi'
 
   return (
     <div
@@ -13,8 +16,17 @@ export default function CharacterCard({ character }) {
       onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.05)'}
       onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
     >
-      <div style={{ fontSize: '52px', textAlign: 'center', marginBottom: '12px', lineHeight: 1 }}>
-        {emoji}
+      <div style={{ fontSize: hasImage ? '0' : '52px', textAlign: 'center', marginBottom: '12px', lineHeight: 1 }}>
+        {hasImage ? (
+          <img
+            src={`/characters/${id}.png`}
+            alt={name}
+            className="w-full h-auto max-w-[120px] mx-auto"
+            style={{ filter: 'drop-shadow(2px 2px 4px rgba(0,0,0,0.1))' }}
+          />
+        ) : (
+          emoji
+        )}
       </div>
       <h3 style={{ fontFamily: '"Quicksand", sans-serif', fontWeight: 700, color: accentColor, fontSize: '20px', marginBottom: '4px' }}>
         {name}
@@ -23,7 +35,7 @@ export default function CharacterCard({ character }) {
         {species}
       </p>
       <p style={{ fontFamily: '"Be Vietnam Pro", sans-serif', color: '#504446', fontSize: '13px', fontStyle: 'italic', lineHeight: '1.5' }}>
-        "{quote}"
+        &ldquo;{quote}&rdquo;
       </p>
     </div>
   )

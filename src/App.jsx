@@ -4,7 +4,6 @@ import Hero from './components/Hero'
 import AboutBook from './components/AboutBook'
 import PagePreview from './components/PagePreview'
 import Characters from './components/Characters'
-import Stickers from './components/Stickers'
 import PageCards from './components/PageCards'
 import Community from './components/Community'
 import SocialGrid from './components/SocialGrid'
@@ -43,7 +42,6 @@ export default function App() {
           <div className="wave-divider bg-primary/5" style={{ background: 'var(--color-primary/0.05)' }} />
         </div>
         <Characters />
-        <Stickers />
         <PageCards />
         <div className="relative bg-surface-container-low">
           <div className="wave-divider wave-divider-flip" />

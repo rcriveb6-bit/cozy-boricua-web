@@ -13,7 +13,7 @@ export const characters = [
   },
   {
     id: "churi",
-    emoji: "🐸",
+    emoji: "🦎",
     name: "Churi",
     species: "Coquí puertorriqueño kawaii",
     icon: "Notas musicales",

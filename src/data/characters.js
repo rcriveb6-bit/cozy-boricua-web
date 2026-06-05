@@ -17,7 +17,7 @@ export const characters = [
     name: "Churi",
     species: "Coquí puertorriqueño kawaii",
     icon: "Notas musicales",
-    img: null,
+    img: "/characters/churi.png",
     personality: "El corazón cultural del grupo. Músico, alma de cualquier fiesta.",
     quote: "Co-quí... y la fiesta empieza.",
     bgColor: "#E8F5EE",

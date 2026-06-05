@@ -13,9 +13,10 @@ export default function Navbar() {
 
   const navLinks = [
     ['#about', 'El libro'],
-    ['#gallery', 'Páginas'],
-    ['#gallery', 'Personajes'],
-    ['#about', 'Comunidad'],
+    ['#gallery', 'Galería'],
+    ['#personajes', 'Personajes'],
+    ['#stickers', 'Stickers'],
+    ['#comunidad', 'Comunidad'],
   ]
 
   return (

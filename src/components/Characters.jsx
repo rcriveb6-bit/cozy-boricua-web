@@ -13,6 +13,32 @@ export default function Characters() {
             Siete amigos listos para explorar contigo la isla.
           </p>
         </div>
+
+        {/* Banner grupal */}
+        <div className="mb-10 kawaii-shadow rounded-2xl overflow-hidden">
+          <img
+            src="/todoslospers.png"
+            alt="Todos los personajes de Cozy Boricua"
+            className="w-full h-auto"
+          />
+        </div>
+
+        <div className="mb-10 kawaii-shadow rounded-2xl overflow-hidden">
+          <img
+            src="/personajes1.png"
+            alt="Personajes principales"
+            className="w-full h-auto"
+          />
+        </div>
+
+        <div className="mb-10 kawaii-shadow rounded-2xl overflow-hidden">
+          <img
+            src="/personajes2.png"
+            alt="Más personajes"
+            className="w-full h-auto"
+          />
+        </div>
+
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
           {characters.map(char => (
             <CharacterCard key={char.id} character={char} />

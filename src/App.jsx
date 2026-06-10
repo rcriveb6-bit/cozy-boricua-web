@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import AboutBook from './components/AboutBook'
+import Features from './components/Features'
 import PagePreview from './components/PagePreview'
 import Characters from './components/Characters'
 import PageCards from './components/PageCards'
@@ -28,7 +29,7 @@ export default function App() {
   }, [])
 
   return (
-    <div className="overflow-x-hidden">
+    <div id="top" className="overflow-x-hidden">
       <Navbar />
       <main>
         <Hero />
@@ -36,6 +37,7 @@ export default function App() {
           <div className="wave-divider" />
           <AboutBook />
         </div>
+        <Features />
         <div className="relative bg-primary/5">
           <div className="wave-divider wave-divider-flip bg-primary/5" style={{ background: 'var(--color-primary/0.05)' }} />
           <PagePreview />

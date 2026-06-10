@@ -8,7 +8,7 @@ const InstagramIcon = () => (
 
 export default function Community() {
   return (
-    <section className="py-20 md:py-28 px-4 md:px-8">
+    <section id="comunidad" className="py-20 md:py-28 px-4 md:px-8">
       <div className="max-w-[1200px] mx-auto space-y-12">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left — Text */}

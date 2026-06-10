@@ -18,29 +18,22 @@ const features = [
 
 export default function Features() {
   return (
-    <section className="bg-secondary-container relative overflow-hidden py-16 md:py-24">
-
-      {/* Wavy top */}
-      <div className="absolute top-0 left-0 w-full h-32 bg-surface wavy-divider" />
-
-      <div className="max-w-[1200px] mx-auto px-4 md:px-6 relative z-10 pt-16">
-        <div className="grid md:grid-cols-3 gap-8 text-center">
+    <section className="py-16 md:py-20 px-4 md:px-8">
+      <div className="max-w-[1200px] mx-auto">
+        <div className="grid md:grid-cols-3 gap-6 md:gap-8 text-center">
           {features.map((f, i) => (
-            <div key={i} className="p-8 rounded-xl bg-white/50 transition-all duration-200 hover:-translate-y-1 hover:shadow-[var(--shadow-md)] hover:bg-white/70">
-              <div className="w-16 h-16 bg-primary-container text-primary rounded-full flex items-center justify-center mx-auto mb-6">
+            <div key={i} className="p-8 rounded-3xl bg-white/60 kawaii-shadow transition-transform duration-200 hover:-translate-y-1">
+              <div className="w-16 h-16 bg-primary/10 text-primary rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="material-symbols-outlined text-4xl" style={{ fontVariationSettings: "'FILL' 1" }}>
                   {f.icon}
                 </span>
               </div>
-              <h3 className="font-headline-md text-headline-md text-on-surface mb-2">{f.title}</h3>
-              <p className="text-body-md text-on-surface-variant">{f.desc}</p>
+              <h3 className="font-display text-xl text-on-surface mb-2">{f.title}</h3>
+              <p className="text-on-surface-variant leading-relaxed">{f.desc}</p>
             </div>
           ))}
         </div>
       </div>
-
-      {/* Wavy bottom */}
-      <div className="absolute bottom-0 left-0 w-full h-32 bg-primary wavy-divider rotate-180" />
     </section>
   )
 }

@@ -26,7 +26,7 @@ export default function Navbar() {
     }`}>
       <div className="max-w-[1200px] mx-auto px-4 md:px-8 flex items-center justify-between h-16 md:h-20">
         {/* Logo */}
-        <a href="#" className="font-display text-lg md:text-xl text-primary no-underline hover:opacity-80 transition-opacity">
+        <a href="#top" className="font-display text-lg md:text-xl text-primary no-underline hover:opacity-80 transition-opacity">
           {links.brandName}
         </a>
 
